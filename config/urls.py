@@ -22,4 +22,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('producer.urls', namespace='producer')),
+    path('consumer/', include('consumer.urls', namespace='consumer')),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
