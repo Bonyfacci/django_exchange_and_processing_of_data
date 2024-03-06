@@ -1,3 +1,13 @@
 from django.contrib import admin
 
-# Register your models here.
+from producer.models import Product, PurchaseCheck
+
+
+@admin.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    ...
+
+
+@admin.register(PurchaseCheck)
+class PurchaseCheckAdmin(admin.ModelAdmin):
+    ...
