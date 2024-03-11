@@ -46,6 +46,9 @@ INSTALLED_APPS = [
     # DjangoRESTFramework
     'rest_framework',
 
+    # Авторизация с использованием JSON Web Token
+    'rest_framework_simplejwt',
+
     # Документация
     'drf_yasg',
 
@@ -131,7 +134,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -153,6 +156,15 @@ STATICFILES_DIRS = (
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 AUTH_USER_MODEL = 'users.User'
+
+REST_FRAMEWORK = {
+    'DEFAULT_AUTHENTICATION_CLASSES': (
+        'rest_framework_simplejwt.authentication.JWTAuthentication',
+    ),
+    'DEFAULT_PERMISSION_CLASSES': [
+            'rest_framework.permissions.AllowAny',
+        ]
+}
 
 # Superuser
 ADMIN_USERNAME = os.getenv('ADMIN_USERNAME')
