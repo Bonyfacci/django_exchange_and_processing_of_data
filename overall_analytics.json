@@ -1,0 +1,99 @@
+[
+    {
+        "id": 45,
+        "purchase_analytics": [
+            {
+                "id": 3,
+                "place": {
+                    "id": 2,
+                    "created": "2024-03-10T23:36:45.617737Z",
+                    "updated": "2024-03-10T23:36:45.617737Z",
+                    "place_id": "ABCDE",
+                    "place_name": "ABCDE"
+                },
+                "category_analytics": [
+                    {
+                        "id": 6,
+                        "category": {
+                            "id": 1,
+                            "created": "2024-03-10T23:36:28.586218Z",
+                            "updated": "2024-03-10T23:36:28.586218Z",
+                            "name": "electronics"
+                        },
+                        "created": "2024-03-11T01:49:59.354695Z",
+                        "updated": "2024-03-11T02:34:40.476395Z",
+                        "total_spent": "5.49",
+                        "average_receipt": "5.49"
+                    },
+                    {
+                        "id": 7,
+                        "category": {
+                            "id": 2,
+                            "created": "2024-03-10T23:36:28.600219Z",
+                            "updated": "2024-03-10T23:36:28.600219Z",
+                            "name": "groceries"
+                        },
+                        "created": "2024-03-11T01:49:59.361340Z",
+                        "updated": "2024-03-11T02:34:40.479334Z",
+                        "total_spent": "21.98",
+                        "average_receipt": "21.98"
+                    }
+                ],
+                "created": "2024-03-11T01:23:42.702956Z",
+                "updated": "2024-03-11T01:23:42.702956Z",
+                "total_purchases": 1,
+                "total_amount": "27.47",
+                "average_receipt": "27.47",
+                "total_nds": "2.47",
+                "total_tips": "3.00"
+            },
+            {
+                "id": 4,
+                "place": {
+                    "id": 1,
+                    "created": "2024-03-10T23:36:28.576200Z",
+                    "updated": "2024-03-10T23:36:28.576200Z",
+                    "place_id": "ABC",
+                    "place_name": "ABC"
+                },
+                "category_analytics": [
+                    {
+                        "id": 6,
+                        "category": {
+                            "id": 1,
+                            "created": "2024-03-10T23:36:28.586218Z",
+                            "updated": "2024-03-10T23:36:28.586218Z",
+                            "name": "electronics"
+                        },
+                        "created": "2024-03-11T01:49:59.354695Z",
+                        "updated": "2024-03-11T02:34:40.476395Z",
+                        "total_spent": "5.49",
+                        "average_receipt": "5.49"
+                    },
+                    {
+                        "id": 7,
+                        "category": {
+                            "id": 2,
+                            "created": "2024-03-10T23:36:28.600219Z",
+                            "updated": "2024-03-10T23:36:28.600219Z",
+                            "name": "groceries"
+                        },
+                        "created": "2024-03-11T01:49:59.361340Z",
+                        "updated": "2024-03-11T02:34:40.479334Z",
+                        "total_spent": "21.98",
+                        "average_receipt": "21.98"
+                    }
+                ],
+                "created": "2024-03-11T01:23:42.705956Z",
+                "updated": "2024-03-11T01:23:42.705956Z",
+                "total_purchases": 1,
+                "total_amount": "27.47",
+                "average_receipt": "27.47",
+                "total_nds": "2.47",
+                "total_tips": "3.00"
+            }
+        ],
+        "created": "2024-03-11T02:34:40.428598Z",
+        "updated": "2024-03-11T02:34:40.428598Z"
+    }
+]

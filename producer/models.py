@@ -1,10 +1,10 @@
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
-NULLABLE = {'null': True, 'blank': True}
+from base.models import BaseModel
 
 
-class Product(models.Model):
+class Product(BaseModel):
     product_id = models.CharField(_('Product id'), max_length=50, help_text='Уникальный идентификатор товара')
     quantity = models.PositiveIntegerField(_('Quantity'), help_text='Количество товара')
     price = models.DecimalField(_('Price'), max_digits=10, decimal_places=2, help_text='Цена товара')
@@ -21,7 +21,7 @@ class Product(models.Model):
         ordering = ('category', 'product_id',)
 
 
-class PurchaseCheck(models.Model):
+class PurchaseCheck(BaseModel):
     transaction_id = models.CharField(_('Transaction id'), max_length=50, unique=True,
                                       help_text='Уникальный идентификатор транзакции')
     timestamp = models.DateTimeField(_('Timestamp'), help_text='Временная метка совершения покупки')
@@ -34,6 +34,9 @@ class PurchaseCheck(models.Model):
                                       help_text='Сумма чаевых (если применимо)')
 
     payment_method = models.CharField(_('Payment method'), max_length=50, help_text='Метод оплаты')
+
+    place_name = models.CharField(_('Place Name'), max_length=150, default="Нет названия",
+                                  help_text='Название места покупки')
 
     objects = None
 
