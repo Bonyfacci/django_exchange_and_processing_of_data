@@ -113,6 +113,10 @@ python manage.py fill_db
     ```python
     celery -A config beat -l info -S django
     ```
+- Запустить Apache Kafka - Consumer (в другом окне терминала)
+    ```python
+    python manage.py consumer
+    ```
 - Запустить сервер (в другом окне терминала)
     ```python
     python manage.py runserver
