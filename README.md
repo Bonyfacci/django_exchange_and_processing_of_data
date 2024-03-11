@@ -12,6 +12,8 @@
 
  - ![alt text](https://img.shields.io/badge/Redis-5.0.2-grey?style=plastic&logo=redis&logoColor=white&labelColor=DC382D)
 
+ - ![alt text](https://img.shields.io/badge/Kafka-5.0.2-grey?style=plastic&logo=kafka&logoColor=white&labelColor=white)
+
 
 ### Описание проекта
 Целью данного проекта является создание двух сервисов, связанных посредством Apache Kafka, 
