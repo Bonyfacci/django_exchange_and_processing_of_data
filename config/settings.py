@@ -10,9 +10,12 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/5.0/ref/settings/
 """
 import os
+from datetime import timedelta
 from pathlib import Path
 
 from dotenv import load_dotenv
+
+import base.apps
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -43,7 +46,14 @@ INSTALLED_APPS = [
     # DjangoRESTFramework
     'rest_framework',
 
+    # Документация
+    'drf_yasg',
+
+    # Распределенная система обработки задач в фоновом режиме
+    'django_celery_beat',
+
     # Приложения
+    'base.apps.BaseConfig',
     'producer.apps.ProducerConfig',
     'consumer.apps.ConsumerConfig',
     'users.apps.UsersConfig',
@@ -148,3 +158,21 @@ AUTH_USER_MODEL = 'users.User'
 ADMIN_USERNAME = os.getenv('ADMIN_USERNAME')
 ADMIN_EMAIL = os.getenv('ADMIN_EMAIL')
 ADMIN_PASSWORD = os.getenv('ADMIN_PASSWORD')
+
+# Kafka
+KAFKA_BOOTSTRAP_SERVERS = 'localhost:9092'
+KAFKA_CONSUMER_GROUP = 'my-group'
+KAFKA_TOPIC_PREFIX = 'purchase_checks'
+
+# Celery
+CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
+CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND')
+CELERY_TIMEZONE = os.getenv('CELERY_TIMEZONE')
+CELERY_TASK_TRACK_STARTED = True
+CELERY_BEAT_SCHEDULE = {
+    'task-name': {
+        'task': 'consumer.tasks.create_analytics',
+        'schedule': timedelta(minutes=1),
+    },
+}
+

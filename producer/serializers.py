@@ -1,5 +1,7 @@
+
 from rest_framework import serializers
 from .models import Product, PurchaseCheck
+from .services import send_to_kafka
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -22,5 +24,7 @@ class PurchaseCheckSerializer(serializers.ModelSerializer):
         for item_data in items_data:
             product = Product.objects.create(**item_data)
             purchase_check.items.add(product)
+
+        send_to_kafka(purchase_check)
 
         return purchase_check

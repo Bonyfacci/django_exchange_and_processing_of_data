@@ -1,11 +1,12 @@
 from django.urls import path
 
-from producer.apps import ProducerConfig
-from .views import PlaceListCreateView, PlaceDetailView
+from .apps import ConsumerConfig
+from .views import PlaceListCreateView, PlaceDetailView, OverallAnalyticsView
 
-app_name = ProducerConfig.name
+app_name = ConsumerConfig.name
 
 urlpatterns = [
-    path('places/', PlaceListCreateView.as_view(), name='place-list-create'),
-    path('places/<int:pk>/', PlaceDetailView.as_view(), name='place-detail'),
+    path('api/places/', PlaceListCreateView.as_view(), name='place-list-create'),
+    path('api/places/<int:pk>/', PlaceDetailView.as_view(), name='place-detail'),
+    path('api/analytics/', OverallAnalyticsView.as_view(), name='overall-analytics'),
 ]
