@@ -12,7 +12,7 @@
 
  - ![alt text](https://img.shields.io/badge/Redis-5.0.2-grey?style=plastic&logo=redis&logoColor=white&labelColor=DC382D)
 
- - ![alt text](https://img.shields.io/badge/Kafka-3.7.0-grey?style=plastic&logo=apachekafka&logoColor=white&labelColor=brown)
+ - ![alt text](https://img.shields.io/badge/Kafka-3.7.0-grey?style=plastic&logo=apachekafka&logoColor=white&labelColor=231f20)
 
 
 ### Описание проекта
